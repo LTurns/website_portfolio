@@ -11,8 +11,7 @@ const taskRoute = require("../backend/routes/task.route");
 // Connecting mongoDB Database
 
 mongoose.Promise = global.Promise;
-mongoose
-  .connect(dbConfig.db, {
+mongoose.connect(dbConfig.db, {
     useNewUrlParser: true,
   })
   .then(
@@ -34,6 +33,7 @@ app.use(
 );
 app.use(cors());
 app.use("/tasks", taskRoute);
+// this becomes the start of the route structure for the API urls.
 
 //   PORT
 const port = process.env.PORT || 4000;
@@ -41,9 +41,9 @@ const server = app.listen(port, () => {
   console.log("Connected to port " + port);
 });
 
-app.use((req, res, next) => {
-  next(createError(404));
-});
+// app.use((req, res, next) => {
+//   next(createError(404));
+// });
 
 app.use(function (err, req, res, next) {
   console.error(err.message);

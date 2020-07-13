@@ -2,10 +2,10 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 import CreateTask from "./components/create_task.component";
 import EditTask from "./components/edit_task.component";
@@ -21,15 +21,15 @@ function App() {
           <Navbar bg="dark" variant="dark">
             <Container>
               <Navbar.Brand>
-                <Link to={"/"} className="nav-link">
-                  React MERN Stack App
+                <Link to={"/create-task"} className="nav-link">
+                  ProjEgg
                 </Link>
               </Navbar.Brand>
 
               <Nav className="justify-content-end">
                 <Nav>
-                  <Link to={"/tasks/new"} className="nav-link">
-                    Create Student
+                  <Link to={"/create-task"} className="nav-link">
+                    Start Project
                   </Link>
                 </Nav>
 
@@ -41,10 +41,11 @@ function App() {
 
                 <Nav>
                   <Link to={"/tasks"} className="nav-link">
-                    Student List
+                    Project List
                   </Link>
                 </Nav>
               </Nav>
+
             </Container>
           </Navbar>
         </header>
@@ -55,9 +56,9 @@ function App() {
               <div className="wrapper">
                 <Switch>
                   <Route path="/" exact component={CreateTask} />
-                  <Route path="/tasks/new" exact component={CreateTask} />
-                  <Route path="/tasks" exact component={SeeTasks} />
-                  <Route path="/tasks/edit" exact component={SeeTasks} />
+                  <Route path="/create-task" exact component={CreateTask} />
+                  <Route path="/task-list" exact component={SeeTasks} />
+                  <Route path="/edit-task/:id" exact component={SeeTasks} />
                 </Switch>
               </div>
             </Col>
