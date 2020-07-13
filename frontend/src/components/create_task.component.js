@@ -17,7 +17,7 @@ export default class CreateTask extends Component {
     // user first sees the site, the content inside the form will initially be blank - or ''.
     this.state = {
       name: "",
-      email: "",
+      email: ""
       //   by changing the user input into state variables, we are then able to access them and send these directly to the database.
     };
 
@@ -64,7 +64,7 @@ export default class CreateTask extends Component {
     // this line means that once submit is clicked, the form will go back to being blank (it's initial state). This is completed after we know that
     // the information has been sent to the database.
 
-    this.setState({ name: "", email: "" });
+    this.setState({ name: " ", email: " "});
   }
 
   render() {

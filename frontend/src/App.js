@@ -33,14 +33,14 @@ function App() {
                   </Link>
                 </Nav>
 
-                {/* <Nav>
-                <Link to={"/edit-student/:id"} className="nav-link">
+                <Nav>
+                <Link to={"/edit-task/:id"} className="nav-link">
                   Edit Student
                 </Link>
-              </Nav> */}
+              </Nav>
 
                 <Nav>
-                  <Link to={"/tasks"} className="nav-link">
+                  <Link to={"/task-list"} className="nav-link">
                     Project List
                   </Link>
                 </Nav>
@@ -58,7 +58,7 @@ function App() {
                   <Route path="/" exact component={CreateTask} />
                   <Route path="/create-task" exact component={CreateTask} />
                   <Route path="/task-list" exact component={SeeTasks} />
-                  <Route path="/edit-task/:id" exact component={SeeTasks} />
+                  <Route path="/edit-task/:id" exact component={EditTask} />
                 </Switch>
               </div>
             </Col>
