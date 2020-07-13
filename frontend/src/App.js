@@ -16,8 +16,6 @@ function App() {
   return (
     <Router>
        <NavBar />
-       My guess is your page is white, and the particle system is also white by default. I tested this in a codesandbox and sure enough they weren't visible until I changed the background color of the container they were in. You can pass configuration props to the component. Here's a simple demo with the particles and links colored black instead.
-
 <Particles
   style={{ position: "absolute" }}
   height="95%"
@@ -27,26 +25,30 @@ function App() {
       shape: {
         type: "circle",
         stroke: {
-           width: 2,
+           width: 10,
             color: "#fe019a", 
-            blur: 100
+            blur: 1,
+            opacity: 0.6
         },
       },
       number: {
-        value: 30
+        value: 50
       },
+      line_linked: {
+        enable: true,
+        distance: 200,
+        color: "#FFFFFF",
+        opacity: 0.7,
+        blur: 150,
+        width: 0.5
+    },
       size: {
-        value: 30
+        value: 6
       }
     }
   }}
 />
-                <Switch>
-                  <Route path="/" exact component={Home} />
-                  <Route path="/portfolio" exact component={Portfolio} />
-                  <Route path="/contact" exact component={Contact} />
-                  <Route path="/edit-portfolio/:id" exact component={Portfolio} />
-                </Switch>
+<Home />
     </Router>
   );
 }

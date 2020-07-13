@@ -69,9 +69,15 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div> 
-        <h1>Portfolio</h1>
-      </div>
+      <div class="dropping-texts"> 
+  <div><h1>React</h1></div>
+  <div><h1>Node JS</h1></div>
+  <div><h1>Ruby</h1></div>
+  <div><h1>Sinatra</h1></div>
+  <div><h1>HTML5</h1></div>
+  <div><h1>JQuery</h1></div>
+  <div><h1>Bootstrap</h1></div>
+</div>
     );
   }
 
