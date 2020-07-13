@@ -9,6 +9,7 @@ import Portfolio from "./components/portfolio";
 import Contact from "./components/contact";
 import NavBar from './components/navbar.component';
 import "./home.css"
+import HomeParticles from './components/particlesHome'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -16,39 +17,9 @@ function App() {
   return (
     <Router>
        <NavBar />
-<Particles
-  style={{ position: "absolute" }}
-  height="95%"
-  width="95%"
-  params={{
-    particles: {
-      shape: {
-        type: "circle",
-        stroke: {
-           width: 10,
-            color: "#fe019a", 
-            blur: 1,
-            opacity: 0.6
-        },
-      },
-      number: {
-        value: 50
-      },
-      line_linked: {
-        enable: true,
-        distance: 200,
-        color: "#FFFFFF",
-        opacity: 0.7,
-        blur: 150,
-        width: 0.5
-    },
-      size: {
-        value: 6
-      }
-    }
-  }}
-/>
-<Home />
+      <Route path="/" exact component={Home}/>
+      <Route path="/portfolio" exact component={Portfolio}/>
+      <Route path="/contact" exact component={Contact}/>
     </Router>
   );
 }

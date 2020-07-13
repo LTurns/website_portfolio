@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import HomeParticles from './particlesHome'
 // we send the data to mongoDB using the axios post http method.
 // first install on computer
 import axios from "axios";
@@ -68,21 +69,22 @@ export default class Home extends Component {
   // }
 
   render() {
-    return (
+    return ( <div> 
+      
+  <div>
+       <HomeParticles />
+    </div>
+
       <div class="dropping-texts"> 
   <div><h1>React</h1></div>
-  <div><h1>Node JS</h1></div>
+  <div><h1>Node</h1></div>
   <div><h1>Ruby</h1></div>
   <div><h1>Sinatra</h1></div>
   <div><h1>HTML5</h1></div>
   <div><h1>JQuery</h1></div>
   <div><h1>Bootstrap</h1></div>
 </div>
+</div>
     );
   }
-
-  // render() {
-  //   return ( 
-  //     <p> Hello World!</p>    )
-  // }
 }
