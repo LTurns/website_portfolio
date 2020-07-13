@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios'
 
-export default class EditTask extends Component {
+export default class Portfolio extends Component {
 
   constructor(props){
     super(props)

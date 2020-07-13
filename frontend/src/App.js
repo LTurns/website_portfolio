@@ -1,70 +1,52 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import Particles from 'react-particles-js';
+import Logo from './london_finished.png';
+import Home from "./components/home";
+import Portfolio from "./components/portfolio";
+import Contact from "./components/contact";
+import NavBar from './components/navbar.component';
+import "./home.css"
 
-import CreateTask from "./components/create_task.component";
-import EditTask from "./components/edit_task.component";
-import SeeTasks from "./components/see_tasks.component";
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navbar.Brand>
-                <Link to={"/create-task"} className="nav-link">
-                  ProjEgg
-                </Link>
-              </Navbar.Brand>
+       <NavBar />
+       My guess is your page is white, and the particle system is also white by default. I tested this in a codesandbox and sure enough they weren't visible until I changed the background color of the container they were in. You can pass configuration props to the component. Here's a simple demo with the particles and links colored black instead.
 
-              <Nav className="justify-content-end">
-                <Nav>
-                  <Link to={"/create-task"} className="nav-link">
-                    Start Project
-                  </Link>
-                </Nav>
-
-                <Nav>
-                <Link to={"/edit-task/:id"} className="nav-link">
-                  Edit Student
-                </Link>
-              </Nav>
-
-                <Nav>
-                  <Link to={"/task-list"} className="nav-link">
-                    Project List
-                  </Link>
-                </Nav>
-              </Nav>
-
-            </Container>
-          </Navbar>
-        </header>
-
-        <Container>
-          <Row>
-            <Col md={12}>
-              <div className="wrapper">
+<Particles
+  style={{ position: "absolute" }}
+  height="95%"
+  width="95%"
+  params={{
+    particles: {
+      shape: {
+        type: "circle",
+        stroke: {
+           width: 2,
+            color: "#fe019a", 
+            blur: 100
+        },
+      },
+      number: {
+        value: 30
+      },
+      size: {
+        value: 30
+      }
+    }
+  }}
+/>
                 <Switch>
-                  <Route path="/" exact component={CreateTask} />
-                  <Route path="/create-task" exact component={CreateTask} />
-                  <Route path="/task-list" exact component={SeeTasks} />
-                  <Route path="/edit-task/:id" exact component={EditTask} />
+                  <Route path="/" exact component={Home} />
+                  <Route path="/portfolio" exact component={Portfolio} />
+                  <Route path="/contact" exact component={Contact} />
+                  <Route path="/edit-portfolio/:id" exact component={Portfolio} />
                 </Switch>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </div>
     </Router>
   );
 }
