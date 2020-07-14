@@ -13,11 +13,12 @@ export default class Portfolio extends Component {
   render() {
     return (
       <div>
-        <Container>
         <PortfolioParticles />
        {/* <h1> Hello World! </h1> */}<br></br><br></br>
-  <Row>
-    <Col><Table class="table1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+       <Container class="containter">
+       <h3> Games </h3>
+  <Row class="table1">
+    <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
       <th><center>Bowling Calculator</center></th>
@@ -32,7 +33,7 @@ export default class Portfolio extends Component {
     </tr>
   </tbody>
 </Table></Col>
-    <Col><Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+    <Col><Table class="tablerow1" opacity="0.5" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
       <th><center>Run Boris Run</center></th>
@@ -47,10 +48,40 @@ export default class Portfolio extends Component {
     </tr>
   </tbody>
 </Table></Col>
-<Col></Col>
-  </Row>
+<Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  <thead>
+    <tr>
+      <th><center>Interactive Paddle Game</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><img width="200px" src="pdf_cv.png"></img></center></td>
+    </tr>
+    <tr>
+      <td>Colourful and responsive CV design.</td>
+    </tr>
+  </tbody>
+</Table></Col>
+  </Row><br></br><br></br>
+
   <Row class="table2">
     <Col> <Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  <thead>
+    <tr>
+      <th><center>Acebook</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><img width="200px" src="acebook.png"></img></center></td>
+    </tr>
+    <tr>
+      <td>A simple, drawn-back clone of Facebook.</td>
+    </tr>
+  </tbody>
+</Table></Col>
+    <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
       <th><center>PDF CV</center></th>
@@ -65,10 +96,23 @@ export default class Portfolio extends Component {
     </tr>
   </tbody>
 </Table></Col>
-    <Col>2 of 3</Col>
-    <Col>3 of 3</Col>
+    <Col><Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  <thead>
+    <tr>
+      <th><center>Acebook</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><img width="200px" src="acebook.png"></img></center></td>
+    </tr>
+    <tr>
+      <td>A simple, drawn-back clone of Facebook.</td>
+    </tr>
+  </tbody>
+</Table></Col>
   </Row>
-</Container>
+  </Container>
       </div>
     );
   }

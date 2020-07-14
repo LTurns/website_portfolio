@@ -1,21 +1,26 @@
 
-.row {
+.table1 {
 
     height: 150px;
-    width: 1000px;
+    width: 750px;
+    padding: 50px;
+}
+
+.table2 {
+    height: 150px;
+    width: 750px;
     padding: 30px;
-    opacity: 0.8;
 }
 
 td {
-    width: 150px;
-    height: 150px;
-    padding: 30px;
-    color: white;
+    width: 120px;
+    height: 100px;
+    background-color: black;
 }
 
 thead {
     background-color: black;
+    border: none;
 }
 
 img {
@@ -23,10 +28,7 @@ img {
     height: 125px;
 }
 
-.table2 {
-    
-}
 
-.Container {
-    margin: 10px;
+.container {
+    opacity: 0.75;
 }

@@ -10,7 +10,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div className="table-wrapper">
-       <ContactParticles />
+       <h1>Hello World!</h1>
       </div> );
   }
 }

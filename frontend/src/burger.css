@@ -1,0 +1,13 @@
+.menu-item:hover {
+    background-color: transparent;
+}
+
+.menu-item {
+    padding: 5px;
+    color: white;
+    outline: none;
+}
+
+.bm-menu {
+    background-color: green;
+  }

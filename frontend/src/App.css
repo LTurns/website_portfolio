@@ -24,6 +24,9 @@ h1 {
   font-size: 300px;
 }
 
+.navigation {
+  background-color: black;
+}
 
 .dropping-texts > div{
   font-size: 0px; 

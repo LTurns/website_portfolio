@@ -4,8 +4,13 @@
     padding: 3px;
 }
 
+.navigation {
+  background-color: black;
+}
+
 h3 {
-    font-size: 15px;
+    font-size: 18px;
+    color: white;
 }
 
 
