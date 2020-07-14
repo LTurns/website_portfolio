@@ -41,10 +41,10 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="200px" src="run_boris_run.png"></img></center></td>
+    <td><center><a href="https://run-boris-run.netlify.app/"><img src="run_boris_run.png" alt="boris"/></a></center></td>
     </tr>
     <tr>
-      <td>SuperMario-styled game to encourage social distancing!</td>
+      <td>SuperMario-styled game to encourage social distancing! Game physics implemented from scratch</td>
     </tr>
   </tbody>
 </Table></Col>
@@ -56,15 +56,15 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="200px" src="pdf_cv.png"></img></center></td>
+      <td><center><a href="https://trusting-einstein-e6ff9a.netlify.app/"><img src="paddle_game.png" alt="paddle"/></a></center></td>
     </tr>
     <tr>
-      <td>Colourful and responsive CV design.</td>
+      <td>Simple, interactive paddle game. Javascript game physics implemented from scratch.</td>
     </tr>
   </tbody>
 </Table></Col>
   </Row><br></br><br></br>
-
+  <h3> Database Integration </h3>
   <Row class="table2">
     <Col> <Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
@@ -84,12 +84,12 @@ export default class Portfolio extends Component {
     <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
-      <th><center>PDF CV</center></th>
+      <th><center>MakersBnB</center></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="200px" src="pdf_cv.png"></img></center></td>
+    <td><center><a href="https://trusting-minsky-2135b4.netlify.app/"><img src="pdf_cv.png" alt="paddle"/></a></center></td>
     </tr>
     <tr>
       <td>Colourful and responsive CV design.</td>
@@ -99,7 +99,55 @@ export default class Portfolio extends Component {
     <Col><Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
-      <th><center>Acebook</center></th>
+      <th><center>Note Taker</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><img width="200px" src="acebook.png"></img></center></td>
+    </tr>
+    <tr>
+      <td>A simple, drawn-back clone of Facebook.</td>
+    </tr>
+  </tbody>
+</Table></Col>
+  </Row><br></br><br></br>
+  <h3> API integration</h3>
+  <Row class="table2">
+    <Col> <Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  <thead>
+    <tr>
+      <th><center>Thermostat</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><center><img width="200px" src="acebook.png"></img></center></td>
+    </tr>
+    <tr>
+      <td>A simple, drawn-back clone of Facebook.</td>
+    </tr>
+  </tbody>
+</Table></Col>
+    <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  <thead>
+    <tr>
+      <th><center>The Guardian</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td><center><a href="https://trusting-minsky-2135b4.netlify.app/"><img src="pdf_cv.png" alt="paddle"/></a></center></td>
+    </tr>
+    <tr>
+      <td>Colourful and responsive CV design.</td>
+    </tr>
+  </tbody>
+</Table></Col>
+    <Col><Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  <thead>
+    <tr>
+      <th><center>Googe Maps</center></th>
     </tr>
   </thead>
   <tbody>
