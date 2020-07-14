@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 import axios from 'axios'
 import Particles from 'react-particles-js';
 
@@ -20,7 +21,7 @@ export default class HomeParticles extends Component {
            width: 10,
             color: "#fe019a", 
             blur: 1,
-            opacity: 0.6
+            opacity: 0.3
         },
       },
       number: {
@@ -40,6 +41,7 @@ export default class HomeParticles extends Component {
     }
   }}
 />
+
       </div>
     );
   }

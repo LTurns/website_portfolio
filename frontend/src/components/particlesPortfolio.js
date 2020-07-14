@@ -23,7 +23,7 @@ export default class PortfolioParticles extends Component {
         },
       },
       number: {
-        value: 15
+        value: 10
       },
       line_linked: {
         enable: true,
