@@ -9,14 +9,9 @@
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 17px;
     color: white;
 }
-
-/* 
-h1 {
-    font-size: 50px;
-} */
 
 .dropping-texts {
     display: inline-block;
@@ -34,9 +29,6 @@ h1 {
    text-align: right;
    font-family: tahoma;
    padding-top: 25%;
-   /* padding-left: 30%; */
-   /* font-weight: 800;
-   overflow: hidden; */
    animation: bg 20s linear infinite;
  }
  

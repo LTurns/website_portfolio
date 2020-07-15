@@ -26,7 +26,6 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-
     <td><center><video width="200" controls>
       <source src="bowling_calculator.mp4" type="video/mp4"></source>
     </video></center></td>
@@ -36,7 +35,7 @@ export default class Portfolio extends Component {
     </tr>
   </tbody>
 </Table></Col>
-    <Col><Table class="tablerow1" opacity="0.5" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+    <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
       <th><center>Run Boris Run</center></th>
@@ -62,7 +61,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><video width="200" controls>
+    <td><center><video width="250" controls>
       <source src="paddle_game.mp4" type="video/mp4"></source>
     </video>
    </center></td>
@@ -83,7 +82,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><video width="200" controls>
+    <td><center><video width="250" controls>
       <source src="acebook_video.mp4" type="video/mp4"></source>
     </video>
    </center></td>
