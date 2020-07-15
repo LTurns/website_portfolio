@@ -56,7 +56,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><a href="https://trusting-einstein-e6ff9a.netlify.app/"><img src="paddle_game.png" alt="paddle"/></a></center></td>
+      <td><center><a href="https://trusting-einstein-e6ff9a.netlify.app/"><img src="paddle_game.png" width="200" alt="paddle"/></a></center></td>
     </tr>
     <tr>
       <td>Simple, interactive paddle game. Javascript game physics implemented from scratch.</td>
@@ -89,10 +89,10 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><a href="https://trusting-minsky-2135b4.netlify.app/"><img src="pdf_cv.png" alt="paddle"/></a></center></td>
+    <td><center><a href=""><img src="makers_bnb.png" alt="makers_bnb"/></a></center></td>
     </tr>
     <tr>
-      <td>Colourful and responsive CV design.</td>
+      <td>A clone of AirBnB, with similar booking features - payment capability excluded.</td>
     </tr>
   </tbody>
 </Table></Col>
@@ -104,7 +104,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="200px" src="acebook.png"></img></center></td>
+      <td><center><img width="250px" src="acebook.png"></img></center></td>
     </tr>
     <tr>
       <td>A simple, drawn-back clone of Facebook.</td>
@@ -122,7 +122,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="200px" src="acebook.png"></img></center></td>
+      <td><center><img width="250px" src="acebook.png"></img></center></td>
     </tr>
     <tr>
       <td>A simple, drawn-back clone of Facebook.</td>
