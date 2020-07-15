@@ -77,13 +77,9 @@ export default class Home extends Component {
     </div>
 
       <div class="dropping-texts"> 
-  <div><h1>React</h1></div>
-  <div><h1>Node</h1></div>
-  <div><h1>Ruby</h1></div>
-  <div><h1>Sinatra</h1></div>
-  <div><h1>HTML5</h1></div>
-  <div><h1>JQuery</h1></div>
-  <div><h1>Bootstrap</h1></div>
+  <div><h1 id="software">Software</h1></div>
+  <div><h1 id="dev">Development</h1></div>
+  <div><h1 id="portfolio">Portfolio</h1></div>
 </div>
 </div>
     );

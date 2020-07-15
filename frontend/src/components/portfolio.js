@@ -26,7 +26,10 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="200px" src="bowling_calculator.png"></img></center></td>
+
+    <td><center><video width="200" controls>
+      <source src="bowling_calculator.mp4" type="video/mp4"></source>
+    </video></center></td>
     </tr>
     <tr>
       <td>Calculates your score throughout your game of bowling, including strikes and spares.</td>
@@ -41,10 +44,13 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><a href="https://run-boris-run.netlify.app/"><img src="run_boris_run.png" alt="boris"/></a></center></td>
+    <td><center><video width="200" controls>
+      <source src="run_boris_run.mp4" type="video/mp4"></source>
+    </video>
+   </center></td>
     </tr>
     <tr>
-      <td>SuperMario-styled game to encourage social distancing! Game physics implemented from scratch</td>
+      <td>SuperMario-styled game to encourage social distancing! Click <a href="https://run-boris-run.netlify.app/">here</a> to play for youself and hear Boris tell you to wash your hands!</td>
     </tr>
   </tbody>
 </Table></Col>
@@ -56,15 +62,18 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><a href="https://trusting-einstein-e6ff9a.netlify.app/"><img src="paddle_game.png" width="200" alt="paddle"/></a></center></td>
+    <td><center><video width="200" controls>
+      <source src="paddle_game.mp4" type="video/mp4"></source>
+    </video>
+   </center></td>
     </tr>
     <tr>
-      <td>Simple, interactive paddle game. Javascript game physics implemented from scratch.</td>
+      <td>Simple, interactive paddle game. Javascript game physics implemented from scratch. Click <a href="https://trusting-einstein-e6ff9a.netlify.app/">here</a> to play for yourself!</td>
     </tr>
   </tbody>
 </Table></Col>
   </Row><br></br><br></br>
-  <h3> Database Integration </h3>
+  <h3> Database Integration</h3>
   <Row class="table2">
     <Col> <Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
@@ -74,7 +83,10 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="200px" src="acebook.png"></img></center></td>
+    <td><center><video width="200" controls>
+      <source src="acebook_video.mp4" type="video/mp4"></source>
+    </video>
+   </center></td>
     </tr>
     <tr>
       <td>A simple, drawn-back clone of Facebook.</td>
@@ -89,7 +101,11 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><a href=""><img src="makers_bnb.png" alt="makers_bnb"/></a></center></td>
+
+    <td><center><video width="200" controls>
+      <source src="makers_bnb_video.mp4" type="video/mp4"></source>
+    </video>
+   </center></td>
     </tr>
     <tr>
       <td>A clone of AirBnB, with similar booking features - payment capability excluded.</td>
@@ -112,7 +128,7 @@ export default class Portfolio extends Component {
   </tbody>
 </Table></Col>
   </Row><br></br><br></br>
-  <h3> API integration</h3>
+  <h3> API integration & Bootstrap CV</h3>
   <Row class="table2">
     <Col> <Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>

@@ -13,14 +13,14 @@ h3 {
     color: white;
 }
 
-
+/* 
 h1 {
-    font-size: 100px;
-}
+    font-size: 50px;
+} */
 
 .dropping-texts {
     display: inline-block;
-    width: 1000px;
+    width: 1200px;
     text-align: center;
     height: 600px;
     vertical-align: -2px;
@@ -33,15 +33,28 @@ h1 {
    margin: 0px;
    text-align: right;
    font-family: tahoma;
-   padding-top: 22.5%;
-   padding-left: 50%;
+   padding-top: 25%;
+   /* padding-left: 30%; */
    /* font-weight: 800;
    overflow: hidden; */
    animation: bg 20s linear infinite;
  }
  
+
+#software {
+  padding-left: 60%;
+}
+
+#dev {
+  padding-left: 25%;
+}
+
+#portfolio {
+  padding-left: 100%;
+}
+
  h1 {
-   font-size: 250px;
+   font-size: 200px;
  }
  
  
