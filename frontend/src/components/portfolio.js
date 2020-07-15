@@ -26,7 +26,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><video width="200" controls>
+    <td><center><video width="300" controls>
       <source src="bowling_calculator.mp4" type="video/mp4"></source>
     </video></center></td>
     </tr>
@@ -43,7 +43,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><video width="200" controls>
+    <td><center><video width="300" controls>
       <source src="run_boris_run.mp4" type="video/mp4"></source>
     </video>
    </center></td>
@@ -61,7 +61,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><video width="250" controls>
+    <td><center><video width="300" controls>
       <source src="paddle_game.mp4" type="video/mp4"></source>
     </video>
    </center></td>
@@ -82,7 +82,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><video width="250" controls>
+    <td><center><video width="300" controls>
       <source src="acebook_video.mp4" type="video/mp4"></source>
     </video>
    </center></td>
@@ -101,7 +101,7 @@ export default class Portfolio extends Component {
   <tbody>
     <tr>
 
-    <td><center><video width="200" controls>
+    <td><center><video width="300" controls>
       <source src="makers_bnb_video.mp4" type="video/mp4"></source>
     </video>
    </center></td>
@@ -119,7 +119,7 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="250px" src="acebook.png"></img></center></td>
+      <td><center><img width="300px" src="acebook.png"></img></center></td>
     </tr>
     <tr>
       <td>A simple, drawn-back clone of Facebook.</td>
@@ -137,10 +137,13 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-      <td><center><img width="250px" src="acebook.png"></img></center></td>
+    <td><center><video width="300" controls>
+      <source src="temperature.mp4" type="video/mp4"></source>
+    </video>
+   </center></td>
     </tr>
     <tr>
-      <td>A simple, drawn-back clone of Facebook.</td>
+      <td>An API-based web application that grabs the temperature of a City and enables you to modify the thermostat accordingly.</td>
     </tr>
   </tbody>
 </Table></Col>
