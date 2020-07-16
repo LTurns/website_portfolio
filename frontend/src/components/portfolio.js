@@ -53,8 +53,8 @@ export default class Portfolio extends Component {
     </tr>
   </tbody>
 </Table></Col>
-<Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
-  <thead>
+{/* <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  {/* <thead>
     <tr>
       <th><center>Interactive Paddle Game</center></th>
     </tr>
@@ -69,8 +69,8 @@ export default class Portfolio extends Component {
     <tr>
       <td>Simple, interactive paddle game. Javascript game physics implemented from scratch. Click <a href="https://trusting-einstein-e6ff9a.netlify.app/">here</a> to play for yourself!</td>
     </tr>
-  </tbody>
-</Table></Col>
+  </tbody> */}
+{/* </Table></Col> */} */}
   </Row><br></br><br></br>
   <h3> Database Integration</h3>
   <Row class="table2">
@@ -111,7 +111,7 @@ export default class Portfolio extends Component {
     </tr>
   </tbody>
 </Table></Col>
-    <Col><Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+    {/* <Col><Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
       <th><center>Note Taker</center></th>
@@ -125,7 +125,7 @@ export default class Portfolio extends Component {
       <td>A simple, drawn-back clone of Facebook.</td>
     </tr>
   </tbody>
-</Table></Col>
+</Table></Col> */}
   </Row><br></br><br></br>
   <h3> API integration & Bootstrap CV</h3>
   <Row class="table2">
@@ -155,14 +155,17 @@ export default class Portfolio extends Component {
   </thead>
   <tbody>
     <tr>
-    <td><center><a href="https://trusting-minsky-2135b4.netlify.app/"><img src="pdf_cv.png" alt="paddle"/></a></center></td>
+    <td><center><video width="300" controls>
+      <source src="guardian.mp4" type="video/mp4"></source>
+    </video>
+   </center></td>
     </tr>
     <tr>
-      <td>Colourful and responsive CV design.</td>
+      <td>An API-based app that collects the news from the Guardian's website.</td>
     </tr>
   </tbody>
 </Table></Col>
-    <Col><Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+    {/* <Col><Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
       <th><center>Googe Maps</center></th>
@@ -176,7 +179,7 @@ export default class Portfolio extends Component {
       <td>A simple, drawn-back clone of Facebook.</td>
     </tr>
   </tbody>
-</Table></Col>
+</Table></Col> */}
   </Row>
   </Container>
       </div>

@@ -19,7 +19,8 @@ export default class PortfolioParticles extends Component {
         stroke: {
            width: 200,
             blur: 1000,
-            opacity: 0.5
+            opacity: 0.5,
+            color: "#c8a2c8 ",
         },
       },
       number: {
@@ -28,7 +29,8 @@ export default class PortfolioParticles extends Component {
       line_linked: {
         enable: true,
         distance: 200,
-        color: "#fed8b1",
+        // color: "#fed8b1",
+        color: "#fbaed2",
         opacity: 0.6,
         width: 300
     },
