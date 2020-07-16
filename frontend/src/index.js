@@ -20,8 +20,9 @@ let canvas = document.getElementById("gameScreen");
 
 if (canvas != null){
 let ctx = canvas.getContext("2d");
-const GAME_WIDTH = 800;
+const GAME_WIDTH = 1200;
 const GAME_HEIGHT = 600;
+
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
 game.start();
 
@@ -36,6 +37,11 @@ function gameLoop(timestamp){
 
   game.update(deltaTime);
   game.draw(ctx);
+
+  ctx.font = "20px Arial " ;
+ctx.fillStyle = "white";
+ctx.textAlign = "center";
+ctx.fillText("Direct the planet to see different skills & hobbies!", canvas.width/2, 80);
 
   requestAnimationFrame(gameLoop);
   // this is where the timestamp comes from.Every time this

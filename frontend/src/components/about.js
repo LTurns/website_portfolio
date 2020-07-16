@@ -1,18 +1,20 @@
 import React from "react";
 import HomeParticles from "./particlesHome"
-import "../about.css"
+import "../about_text.css"
+import "../home.css"
 
     function About(){
       return(
         <div className="play">
            <div>
-            <HomeParticles />
             </div>
+            <HomeParticles />
             <div>
+
           <center>            
-            <canvas id="gameScreen" width="800" height="500"></canvas>
-          </center>
-          </div>
+            <canvas id="gameScreen" width="1200" height= "600"></canvas>
+       
+          </center>   </div>
         </div>
       )
     }
