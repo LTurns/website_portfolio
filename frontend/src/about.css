@@ -1,4 +1,4 @@
 #gameScreen {
-    background: black;
+    background-image: url("/images/background.png");
     margin-top: 70px;
 }

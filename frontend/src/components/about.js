@@ -1,15 +1,18 @@
 import React from "react";
-import PortfolioParticles from "./particlesPortfolio"
+import HomeParticles from "./particlesHome"
 import "../about.css"
 
     function About(){
       return(
         <div className="play">
-
-            <PortfolioParticles />
+           <div>
+            <HomeParticles />
+            </div>
+            <div>
           <center>            
-            <canvas id="gameScreen" width="800" height="600"></canvas>
+            <canvas id="gameScreen" width="800" height="500"></canvas>
           </center>
+          </div>
         </div>
       )
     }

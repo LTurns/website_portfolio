@@ -4,10 +4,10 @@ export default class Brick {
 
   constructor (game, position){
     this.image = new Image()
-    this.image.src = "/images/brick.png";
+    this.image.src = "/images/other_brick.png";
     this.position = position;
     this.width = 80;
-    this.height = 70;
+    this.height = 20;
     this.game = game;
     this.markedForDeletion = false;
 

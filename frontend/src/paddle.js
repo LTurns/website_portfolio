@@ -15,7 +15,7 @@ export default class Paddle {
   
       this.position = {
         x: 475,
-        y: 540
+        y: 440
         // x: game.gameWidth / 2 - this.width / 2,
         // center between 0 and 600 to make in central. To do this we divide the gamewidth by 2. However, as the width is done by squares
         // and is an even number, we also need to divide this.width by 2 to ensure we are in the middle of the square.
