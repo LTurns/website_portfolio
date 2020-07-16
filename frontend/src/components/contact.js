@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import ContactParticles from './particlesContact';
+import PortfolioParticles from "./particlesPortfolio";
 
 export default class Contact extends Component {
 
@@ -47,7 +48,12 @@ export default class Contact extends Component {
   }
 
   render() {
+ 
     return (
+
+      <div>
+      <PortfolioParticles />
+
       <form className="contact-form" onSubmit={ (e) => this.formSubmit(e)}>
       <label class="message" htmlFor="message-input">Your Message</label>
       <textarea onChange={e => this.setState({ message: e.target.value})} name="message" class="message-input" type="text" placeholder="Please write your message here" value={this.state.message} required/>
@@ -61,7 +67,8 @@ export default class Contact extends Component {
       <div className="button--container">
           <button type="submit" className="button button-primary">{ this.state.buttonText }</button>
       </div>
-    </form>)
+    </form>
+    </div>)
   }
 }
 
