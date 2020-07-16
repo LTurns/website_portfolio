@@ -7,7 +7,6 @@ import Logo from './london_finished.png';
 import Home from "./components/home";
 import Portfolio from "./components/portfolio";
 import Contact from "./components/contact";
-import NavBar from './components/navbar.component';
 import Navigation from './components/navigation';
 import "./home.css"
 import HomeParticles from './components/particlesHome';
@@ -17,7 +16,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
-        <NavBar />
        <Navigation />
 
       <Route path="/" exact component={Home}/>

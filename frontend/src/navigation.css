@@ -1,0 +1,14 @@
+.navar-nav{
+    background-color: black;
+}
+
+.navbar-expand-sm {
+    background-color: black;
+    margin-left: 20px;
+}
+
+a:hover {
+    font-size: 20px;
+    color: white;
+
+  }
