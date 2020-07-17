@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table';
-import axios from 'axios'
 import Particles from 'react-particles-js';
 
 export default class HomeParticles extends Component {
@@ -31,19 +27,12 @@ export default class HomeParticles extends Component {
       number: {
         value: 20
       },
-      // line_linked: {
-      //   enable: true,
-      //   distance: 200,
-      //   color: "#FFF",
-      //   opacity: 0.7,
-      //   width: 3
       size: {
         value: 5
       }
     }
   }}
 />
-
       </div>
     );
   }

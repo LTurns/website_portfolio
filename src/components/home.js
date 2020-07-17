@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import HomeParticles from './particlesHome'
 import PortfolioParticles from './particlesPortfolio'
-// we send the data to mongoDB using the axios post http method.
-// first install on computer
-import axios from "axios";
 
 export default class Home extends Component {
 

@@ -55,6 +55,8 @@ export default class InputHandler {
            // left refers to -10 and right refers to 10 (remember).
            paddle.stop();
            break;
+           default:
+            // do nothing
          }
        });
     
