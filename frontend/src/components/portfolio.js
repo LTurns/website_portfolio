@@ -53,8 +53,8 @@ export default class Portfolio extends Component {
     </tr>
   </tbody>
 </Table></Col>
-{/* <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
-  {/* <thead>
+<Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  <thead>
     <tr>
       <th><center>Interactive Paddle Game</center></th>
     </tr>
@@ -69,8 +69,8 @@ export default class Portfolio extends Component {
     <tr>
       <td>Simple, interactive paddle game. Javascript game physics implemented from scratch. Click <a href="https://trusting-einstein-e6ff9a.netlify.app/">here</a> to play for yourself!</td>
     </tr>
-  </tbody> */}
-{/* </Table></Col> */} */}
+  </tbody> 
+ </Table></Col>
   </Row><br></br><br></br>
   <h3> Database Integration</h3>
   <Row class="table2">

@@ -1,52 +1,96 @@
-let express = require("express");
-let mongoose = require("mongoose");
-let cors = require("cors");
-let bodyParser = require("body-parser");
-let dbConfig = require("./database/db");
+// var restify = require('restify');
+// var nodemailer = require("nodemailer");
+// var bodyParser = require("body-parser");
+// var corsMiddleware = require("restify-cors-middleware");
+// var http = require('http');
 
-// Express route
+// var cors = corsMiddleware({
+// 	preflightMaxAge: 5, 
+// 	origins: ['*'], 
+// 	allowHeaders: ['API-Token'], 
+// 	exposeHeaders: ['API-Token-Expiry']
+// });
 
-const taskRoute = require("../backend/routes/task.route");
+// var server = restify.createServer();
+// server.pre(cors.preflight);
+// server.use(cors.actual);
+// server.use(restify.plugins.queryParser({
+// 	mapParams: true
+// }));
+// server.use(restify.plugins.bodyParser({
+// 	mapParams: true
+// }));
 
-// Connecting mongoDB Database
+// server.use(
+//     function crossOrigin(req,res,next){
+//         res.header("Access-Control-Allow-Origin", "*"); // the client could be a mobile app so we must allow POSTs from any origin
+//         res.header("Access-Control-Allow-Headers", "X-Requested-With");
+//         return next();
+//     }
+// );
 
-mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
-    useNewUrlParser: true,
-  })
-  .then(
-    () => {
-      console.log("Database successfully connected!");
-    },
-    (error) => {
-      console.log("Could not connect to database : " + error);
-    }
-  );
+// server.use(restify.plugins.fullResponse());
+
+// var smtpTransport = nodemailer.createTransport({
+// 	service: 'Gmail', 
+// 	auth: {
+// 		user: 'lizzieturney@gmail.com', 
+// 		pass: 'hellome23'
+// 	}
+// }); 
+
+// server.post('/email', function create(req, res, next){
+
+// 	var mail = {
+// 		from: req.params.email,
+// 		to: 'lizzieturney@gmail.com', 
+// 		subject: 'Website Enquiry',
+// 		html: "name: <br>" + req.params.nom + "</br> message <br>" + req.params.message +" </br>email </br>" + req.params.email,
+// 	}
+
+// 	smtpTransport.sendMail(mail, function(error, response){
+// 		if(error){
+// 			console.log("Email sending error");
+// 			console.log(error);
+// 		} else {
+// 			console.log("success!")
+// 		}
+// 		smtpTransport.close();
+// 	});
+
+// 	res.send(201, req.params);
+// });
+
+// http.createServer(function (req, res) {
+//   res.writeHead(200, {'Content-Type': 'text/plain'});
+//   res.write('Hello World!');
+//   res.end();
+// }).listen(3000);
+
+
+
+const express = require('express')
+const bodyParser = require('body-parser')
+// cross origin resource sharing
+const cors = require('cors')
+const sendGrid = require('@sendGrid/mail')
 
 const app = express();
 
 app.use(bodyParser.json());
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
+
 app.use(cors());
-app.use("/tasks", taskRoute);
-// this becomes the start of the route structure for the API urls.
 
-//   PORT
-const port = process.env.PORT || 4000;
-const server = app.listen(port, () => {
-  console.log("Connected to port " + port);
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
 });
 
-// app.use((req, res, next) => {
-//   next(createError(404));
-// });
+app.get('/api', (req, res, next) => {
+  res.send('API Staus: Running')
+})
 
-app.use(function (err, req, res, next) {
-  console.error(err.message);
-  if (!err.statusCode) err.statusCode = 500;
-  res.status(err.statusCode).send(err.message);
-});
+//listen on port 3030 on local host
+app.listen(3030, '0.0.0.0');
