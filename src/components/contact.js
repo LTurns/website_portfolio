@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import PortfolioParticles from "./particlesPortfolio";
 import "../contact.css"
 const API_PATH = 'http://localhost:3030/api'
 export default class Contact extends Component {
