@@ -6,6 +6,7 @@ import Portfolio from "./components/portfolio";
 // import Contact from "./components/contact";
 import About from "./components/about"
 import Navigation from './components/navigation';
+import Contact from './components/contact'
 import "./home.css"
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -14,10 +15,10 @@ function App() {
     <Router>
        <Navigation />
 
-      <Route path="/#" exact component={Home}/>
-      <Route path="/#portfolio" exact component={Portfolio}/>
-      <Route path="/#contact" exact component={Contact}/>
-      <Route path="/#about" exact component={About}/>
+      <Route path="/" exact component={Home}/>
+      <Route path="/portfolio" exact component={Portfolio}/>
+      <Route path="/contact" exact component={Contact}/>
+      <Route path="/about" exact component={About}/>
     </Router>
   );
 }
