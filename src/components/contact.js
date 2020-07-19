@@ -1,40 +1,97 @@
 import React, { Component } from "react";
-import axios from 'axios';
 import "../contact.css"
 import Table from 'react-bootstrap/Table';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import PortfolioParticles from './particlesPortfolio';
-const API_PATH = 'http://localhost:3030/api'
-export default class Contact extends Component {
+import validator from 'validator';
+import FormError from './FormErrors';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      fname: '',
-      lname: '',
-      email: '',
-      message: '',
-      mailSent: false,
-      error: null
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+
+export default class Contact extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+          fName: '',
+          lName: '',
+          email: '',
+          subject: '',
+          formValidity: false,
+          submitDisabled: false,
+          formErrors: {
+              email: 'Please Enter a correct Email',
+              name: 'First and last names should contain only alphabet characters'
+          },
+      };
+
+
+
+      // const SENDGRID_API_KEY =  "process.env.SENDGRID_API_KEY}" ;
+      // sgMail.setApiKey(SENDGRID_API_KEY);
+      sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+      this.changeValue = this.changeValue.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
+   
     }
-  }
-    handleFormSubmit = e => {
-      e.preventDefault();
-      axios({
-        method: 'post',
-        url: `${API_PATH}`,
-        headers: { 'content-type': 'application/json' },
-        data: this.state
-      })
-        .then(result => {
+
+  
+    changeValue = event => {
+      this.setState({
+          [event.target.name]: event.target.value,
+      });
+  };
+
+  onSubmit = (event) => {
+      event.preventDefault();
+
+      let formValidity = true;
+      let errorType = undefined;
+
+      const MSG = {
+          to: 'lizzieturney@gmail.com',
+          from: 'lizzieturney@gmail.com',
+          subject: 'New Lead',
+          text: ' ',
+          html: '<div style="text-align:center;font-size:22px">' +
+          '<h2>You have received a new enquiry!</h2>' +
+          '<ul style="text-align: left;font-size:16px">' +
+          '<li>First Name: ' + this.state.fName + '</li>' +
+          '<li>Last Name: ' + this.state.lName + '</li>' +
+          '<li>Mail Address: ' + this.state.email + '</li>' +
+          '<li>Subject: ' + this.state.subject + '</li>' +
+          '</ul>' +
+          '</div>',
+      };
+
+      if (!validator.isEmail(this.state.email)) {
+          formValidity = false;
+          errorType = this.state.formErrors.email
+      } else if (!validator.isAlpha(this.state.fName) || !validator.isAlpha(this.state.lName)) {
+          formValidity = false;
+          errorType = this.state.formErrors.name
+      } 
+      if (!formValidity) {
           this.setState({
-            mailSent: result.data.sent
+              formValidity,
+              errorType
           })
-        })
-        .catch(error => this.setState({ error: error.message }));
-    }
+      } else {
+          this.setState({
+              formValidity,
+              errorType: "Success, we'll get back to you shortly!",
+              submitDisabled: true,
+              fName: '',
+              lName: '',
+              email: '',
+              subject: ''
+          }, () => sgMail.send(MSG))
+      }
+  };
 
 
   render(){
@@ -42,9 +99,9 @@ export default class Contact extends Component {
         <div>
         <PortfolioParticles />
        {/* <h1> Hello World! </h1> */}<br></br><br></br>
-       <Container class="containter">
-  <Row class="table1">
-    <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+       <Container className="containter">
+  <Row className="table1">
+    <Col><Table className="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
     <tr>
       <th><center>Contact Me</center></th>
@@ -53,31 +110,35 @@ export default class Contact extends Component {
   <tbody>
     <tr>
     <td><center>
-    <form action="#" method="post" id="contact_form">
-    <div class="name">
-      <label for="name"></label>
-      <input type="text" placeholder="My name is" name="name" id="name_input" required/>
+    <form action="#">
+    <div className="firstName">
+      {/* <label for="firstname"></label> */}
+      <input type="text" value={this.state.fName} placeholder="My first name is" name="name" id="name_input" onChange={event => this.changeValue(event)}  required/>
     </div>
-    <div class="email">
-      <label for="email"></label>
-      <input type="email" placeholder="My e-mail is" name="email" id="email_input" required/>
+    <div className="lastName">
+      {/* <label for="lastName"></label> */}
+      <input type="text" value={this.state.lName} placeholder="My last name is" name="name" id="name_input" onChange={event => this.changeValue(event)} required/>
     </div>
-    <div class="telephone">
-      <label for="name"></label>
-      <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required/>
+    <div className="email">
+      {/* <label for="email"></label> */}
+      <input type="email" placeholder="My email is" name="email" value={this.state.email} id="email_input" onChange={event => this.changeValue(event)} required/>
     </div>
-    <div class="subject">
-      <label for="subject"></label>
-      <select placeholder="Subject line" name="subject" id="subject_input" required>
+    <div className="subject">
+      {/* <label for="subject"></label> */}
+      <select placeholder="Subject line" name="subject" id="subject_input" value={this.state.subject} onChange={event => this.changeValue(event)} required>
       </select>
     </div>
-    <div class="message">
-      <label for="message"></label>
+    <div className="message">
+      {/* <label for="message"></label> */}
       <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
     </div>
-    <div class="submit">
-      <input type="submit" value="Send Message" id="form_button" />
-    </div>
+
+
+    <button disabled={this.state.submitDisabled} onClick={(event) => this.onSubmit(event)}>Submit</button>
+                <FormError errorType={this.state.errorType}/>
+    {/* <div className="submit">
+      <input disabled={this.state.submitDisabled} onClick={(event) => this.onSubmit(event)} type="submit" value="Send Message" id="form_button" />
+    </div> */}
     {/* <div class="submit">
       <input type="submit" action="/about" value="Paddle Game" id="about_button" />
     </div> */}
