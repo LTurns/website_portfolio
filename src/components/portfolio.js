@@ -124,7 +124,7 @@ export default class Portfolio extends Component {
   </tbody>
 </Table></Col> */}
   </Row><br></br><br></br>
-  <h3> API integration & Bootstrap CV</h3>
+  <h3> API integration</h3>
   <Row class="table2">
     <Col> <Table class="table2" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
   <thead>
