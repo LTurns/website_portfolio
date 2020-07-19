@@ -42,7 +42,7 @@ export default class Contact extends Component {
   
     changeValue = event => {
       this.setState({
-          [event.target.name]: event.target.value,
+          [event.target.fName]: event.target.value,
       });
   };
 
