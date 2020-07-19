@@ -4,6 +4,11 @@
     padding: 3px;
 }
 
+
+/* body {
+  width: 800px;
+} */
+
 .navigation {
   background-color: black;
 }
@@ -15,9 +20,9 @@ h3 {
 
 .dropping-texts {
     display: inline-block;
-    width: 1200px;
+    width: 800px;
     text-align: center;
-    height: 600px;
+    height: 1000px;
     vertical-align: -2px;
     color: white;
  

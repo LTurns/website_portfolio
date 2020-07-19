@@ -3,7 +3,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Home from "./components/home";
 import Portfolio from "./components/portfolio";
-// import Contact from "./components/contact";
 import About from "./components/about"
 import Navigation from './components/navigation';
 import Contact from './components/contact'

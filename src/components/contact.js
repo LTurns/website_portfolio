@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import "../contact.css"
+import Table from 'react-bootstrap/Table';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import PortfolioParticles from './particlesPortfolio';
 const API_PATH = 'http://localhost:3030/api'
 export default class Contact extends Component {
 
@@ -34,41 +39,56 @@ export default class Contact extends Component {
 
   render(){
       return(
-        <form action="#" >
-        <label>First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.."
-          value={this.state.fname}
-          onChange={e => this.setState({ fname: e.target.value })}
-        />
-        <label>Last Name</label>
-        <input type=" text" id="lname" name="lastname" placeholder="Your last name.."
-          value={this.state.lname}
-          onChange={e => this.setState({ lname: e.target.value })}
-        />
-      
-      
-        <label>Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email"
-          value={this.state.email}
-          onChange={e => this.setState({ email: e.target.value })}
-        />
-      
-      
-        <label>Message</label>
-        <textarea id="message" name="message" placeholder="Write something.."
-          onChange={e => this.setState({ message: e.target.value })}
-          value={this.state.message}
-        ></textarea>
-        <input type="submit" onClick={e => this.handleFormSubmit(e)} value="Submit" />
-
         <div>
-  {this.state.mailSent &&
-    <div>Thank you for contacting me.</div>
-  }
+        <PortfolioParticles />
+       {/* <h1> Hello World! </h1> */}<br></br><br></br>
+       <Container class="containter">
+  <Row class="table1">
+    <Col><Table class="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">
+  <thead>
+    <tr>
+      <th><center>Contact Me</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td><center>
+    <form action="#" method="post" id="contact_form">
+    <div class="name">
+      <label for="name"></label>
+      <input type="text" placeholder="My name is" name="name" id="name_input" required/>
+    </div>
+    <div class="email">
+      <label for="email"></label>
+      <input type="email" placeholder="My e-mail is" name="email" id="email_input" required/>
+    </div>
+    <div class="telephone">
+      <label for="name"></label>
+      <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required/>
+    </div>
+    <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="Subject line" name="subject" id="subject_input" required>
+      </select>
+    </div>
+    <div class="message">
+      <label for="message"></label>
+      <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+    </div>
+    <div class="submit">
+      <input type="submit" value="Send Message" id="form_button" />
+    </div>
+    {/* <div class="submit">
+      <input type="submit" action="/about" value="Paddle Game" id="about_button" />
+    </div> */}
+  </form>
+   </center> </td>
+    </tr>
+  </tbody>
+</Table></Col>
+</Row>
+</Container>
 </div>
-      </form >
       );
   }
 }
-
-// //In the above code, we are making HTTP GET request using React Axios and Node/Express JS REST API. We are using React-Bootstrap table to show the Students data on the frontend.
