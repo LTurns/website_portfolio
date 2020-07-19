@@ -123,11 +123,11 @@ export default class Contact extends Component {
       {/* <label for="email"></label> */}
       <input type="email" placeholder="My email is" name="email" value={this.state.email} id="email_input" onChange={event => this.changeValue(event)} required/>
     </div>
-    <div className="subject">
+    {/* <div className="subject">
       {/* <label for="subject"></label> */}
-      <select placeholder="Subject line"  id="subject_input" value={this.state.subject} onChange={event => this.changeValue(event)} required>
+      {/* <select placeholder="Subject line"  id="subject_input" value={this.state.subject} onChange={event => this.changeValue(event)} required>
       </select>
-    </div>
+    </div> */} */}
     <div className="message">
       {/* <label for="message"></label> */}
       <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
