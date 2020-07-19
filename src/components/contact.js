@@ -125,7 +125,7 @@ export default class Contact extends Component {
     </div>
     <div className="subject">
       {/* <label for="subject"></label> */}
-      <select placeholder="Subject line" name="subject" id="subject_input" value={this.state.subject} onChange={event => this.changeValue(event)} required>
+      <select placeholder="Subject line"  id="subject_input" value={this.state.subject} onChange={event => this.changeValue(event)} required>
       </select>
     </div>
     <div className="message">
