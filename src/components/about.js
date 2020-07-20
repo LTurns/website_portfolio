@@ -1,5 +1,5 @@
 import React from "react";
-import HomeParticles from "./particlesHome"
+import PortfolioParticles from "./particlesPortfolio"
 import Table from 'react-bootstrap/Table';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,7 +10,7 @@ import "../home.css"
     function About(){
       return(
   <div>
-    <HomeParticles />
+    <PortfolioParticles />
     <Container className="containter">
     <Row className="table1">
     <Col><Table className="tablerow1" striped bordered hover variant="dark" responsive="lg" padding-bottom="1000px">

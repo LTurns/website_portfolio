@@ -27,7 +27,12 @@ export const level1 = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ],
+    [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, ],
+    [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, ],
+    [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, ],
+    [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, ],
+    [1, 1, 1, 1, 0, 0, 1, 1, 1, 1, ],
+
 ]
 // this array essentially structures the construction of the bricks.
 // here the 1's represent bricks and the 0's represent empty spaces.

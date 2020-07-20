@@ -15,7 +15,7 @@ export default class Paddle {
       this.speed = 0;
   
       this.position = {
-        x: 475,
+        x: 425,
         y: 370
         // x: game.gameWidth / 2 - this.width / 2,
         // center between 0 and 600 to make in central. To do this we divide the gamewidth by 2. However, as the width is done by squares

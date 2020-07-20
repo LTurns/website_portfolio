@@ -28,8 +28,8 @@ export default class Brick {
 
 
   draw(ctx){
-  var grd = ctx.createLinearGradient(1450, 0, 0, 0);
-  grd.addColorStop(0, "black");
+  var grd = ctx.createLinearGradient(1000, 0, 0, 0);
+  grd.addColorStop(0, "grey");
   grd.addColorStop(1, "white");
 
 // Fill with gradient
