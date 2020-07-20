@@ -2,3 +2,8 @@
 from = "/*"
 to = "/index.html"
 status = 200
+from = "/contact"
+to = "https://api.sendgrid.com/v3/mail/send"
+status = 200
+force = true
+headers = {X-From = "Netlify"}
