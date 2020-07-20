@@ -7,7 +7,7 @@ export default class Ball {
      // This info is now in the game class so we can simply take in the game class as a parameter.
      this.image = new Image()
      this.image.src = "/images/BALL.png";
-      this.position = { x: 10, y: 400}
+      this.position = { x: 10, y: 350}
       this.speed = { x: 4, y: -2};
       // the 400 and -2 are here so that the ball starts off at the bottom of the screen instead of the top.
       this.size = 30

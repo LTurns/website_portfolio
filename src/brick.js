@@ -6,8 +6,8 @@ export default class Brick {
     this.image = new Image()
     this.image.src = "/images/other_brick.png";
     this.position = position;
-    this.width = 80;
-    this.height = 20;
+    this.width = 100;
+    this.height = 30;
     this.game = game;
     this.markedForDeletion = false;
 
@@ -28,12 +28,24 @@ export default class Brick {
 
 
   draw(ctx){
-   ctx.drawImage (
-     this.image,
-     this.position.x,
-     this.position.y,
-     this.width,
-     this.height
-   )
-  }
+  var grd = ctx.createLinearGradient(1, 0, 0, 1);
+  grd.addColorStop(0, "#a9a9a9");
+  grd.addColorStop(1, "white");
+
+// Fill with gradient
+  ctx.fillStyle = grd;
+  ctx.fillRect(this.position.x, this.position.y, this.width, this.height);    
+    // ctx.fillStyle = '#d3d3d3'
+    // ctx.fillRect(this.position.x, this.position.y, this.width, this.height); 
+     };
+
+
+  //  ctx.drawImage (
+  //    this.image,
+  //    this.position.x,
+  //    this.position.y,
+  //    this.width,
+  //    this.height
+  //  )
+  // }
 }

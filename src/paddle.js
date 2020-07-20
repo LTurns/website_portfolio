@@ -2,6 +2,7 @@ export default class Paddle {
 
     constructor(game) {
       this.gameWidth = game.gameWidth;
+      this.gameHeight = game.gameHeight;
 
       this.image = new Image()
       this.image.src="/images/paddle.png"
@@ -15,7 +16,7 @@ export default class Paddle {
   
       this.position = {
         x: 475,
-        y: 560
+        y: 370
         // x: game.gameWidth / 2 - this.width / 2,
         // center between 0 and 600 to make in central. To do this we divide the gamewidth by 2. However, as the width is done by squares
         // and is an even number, we also need to divide this.width by 2 to ensure we are in the middle of the square.
@@ -41,8 +42,12 @@ export default class Paddle {
   
   draw(ctx){
     // ctx.fillStyle = '#0ff'
-    ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
-  }
+
+      ctx.fillStyle = '#d3d3d3'
+      ctx.fillRect(this.position.x, this.position.y, this.width, this.height); 
+       };
+    // ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+
   
   update(deltaTime){
   
