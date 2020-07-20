@@ -55,14 +55,9 @@ function gameLoop(timestamp){
   ctx.fillText('* * * * * * * * * * * * * * *', 500, 175)
   ctx.fillText('Use the arrow keys', 500, 200)
   ctx.fillText('to move the paddle', 500, 230)
-  ctx.fillText('and see additional skills', 500, 260)
+  ctx.fillText('and see skills', 500, 260)
   ctx.fillText('& tech stack!', 500, 290)
   ctx.fillText('* * * * * * * * * * * * * * *', 500, 320)
-
-
-
-  game.update(deltaTime);
-  game.draw(ctx);
 
   ctx.fillText('Tech Stack:', 800, 18);
   ctx.fillText('React, Bootstrap, CSS, HTML', 800, 53);
@@ -74,6 +69,13 @@ function gameLoop(timestamp){
   ctx.fillText('Keen to develop and learn new skills', 800, 260);
   ctx.fillText('Confident writter', 800, 300);
   ctx.fillText('Entrepreneurial spirit', 800, 343);
+
+
+
+  game.update(deltaTime);
+  game.draw(ctx);
+
+
 
 
   // ctx.fillText('Tennis or a little jog for fitness', 100, 133);
