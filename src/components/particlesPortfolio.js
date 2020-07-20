@@ -26,8 +26,8 @@ export default class PortfolioParticles extends Component {
       line_linked: {
         enable: true,
         distance: 200,
-        // color: "#808080",
-        color: "#fbaed2",
+        color: "#808080",
+        // color: "#fbaed2",
         opacity: 0.6,
         width: 300
     },
