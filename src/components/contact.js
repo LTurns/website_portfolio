@@ -8,8 +8,6 @@ import PortfolioParticles from './particlesPortfolio';
 import validator from 'validator';
 import FormError from './FormErrors';
 
-const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
 export default class Contact extends Component {
@@ -28,17 +26,10 @@ export default class Contact extends Component {
           },
       };
 
-
-
-      // const SENDGRID_API_KEY =  "process.env.SENDGRID_API_KEY}" ;
-      // sgMail.setApiKey(SENDGRID_API_KEY);
-      sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
       this.changeValue = this.changeValue.bind(this);
       this.onSubmit = this.onSubmit.bind(this);
    
-    }
-
+    };
   
     changeValue = event => {
       this.setState({
@@ -52,21 +43,19 @@ export default class Contact extends Component {
       let formValidity = true;
       let errorType = undefined;
 
-      const MSG = {
-          to: 'lizzieturney@gmail.com',
-          from: 'lizzieturney@gmail.com',
-          subject: 'New Lead',
-          text: ' ',
-          html: '<div style="text-align:center;font-size:22px">' +
-          '<h2>You have received a new enquiry!</h2>' +
-          '<ul style="text-align: left;font-size:16px">' +
-          '<li>First Name: ' + this.state.fName + '</li>' +
-          '<li>Last Name: ' + this.state.lName + '</li>' +
-          '<li>Mail Address: ' + this.state.email + '</li>' +
-          '<li>message: ' + this.state.message + '</li>' +
-          '</ul>' +
-          '</div>',
+
+      const post = {
+        message: this.state.message,
+        fName: this.state.fName,
+        lName: this.state.lName,
+        email: this.state.email
       };
+
+      fetch('/api/mail', {
+        method: 'POST',
+        body: post,
+      });
+    
 
       if (!validator.isEmail(this.state.email)) {
           formValidity = false;
@@ -81,7 +70,6 @@ export default class Contact extends Component {
               errorType
           })
       } else {
-        
           this.setState({
               formValidity,
               errorType: "Success, we'll get back to you shortly!",
@@ -90,10 +78,10 @@ export default class Contact extends Component {
               lName: '',
               email: '',
               message: ''
-          }, () => sgMail.send(MSG))
-      }
-  };
+          });
+      };
 
+    };
 
   render(){
       return(
@@ -138,12 +126,6 @@ export default class Contact extends Component {
 
     <button disabled={this.state.submitDisabled} onClick={(event) => this.onSubmit(event)}>Submit</button>
                 <FormError errorType={this.state.errorType}/>
-    {/* <div className="submit">
-      <input disabled={this.state.submitDisabled} onClick={(event) => this.onSubmit(event)} type="submit" value="Send Message" id="form_button" />
-    </div> */}
-    {/* <div class="submit">
-      <input type="submit" action="/about" value="Paddle Game" id="about_button" />
-    </div> */}
   </form>
    </center> </td>
     </tr>
