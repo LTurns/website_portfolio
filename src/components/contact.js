@@ -19,7 +19,7 @@ export default class Contact extends Component {
           fName: '',
           lName: '',
           email: '',
-          subject: '',
+          message: '',
           formValidity: false,
           submitDisabled: false,
           formErrors: {
@@ -42,7 +42,7 @@ export default class Contact extends Component {
   
     changeValue = event => {
       this.setState({
-          [event.target.fName]: event.target.value,
+          [event.target.name]: event.target.value,
       });
   };
 
@@ -63,7 +63,7 @@ export default class Contact extends Component {
           '<li>First Name: ' + this.state.fName + '</li>' +
           '<li>Last Name: ' + this.state.lName + '</li>' +
           '<li>Mail Address: ' + this.state.email + '</li>' +
-          '<li>Subject: ' + this.state.subject + '</li>' +
+          '<li>message: ' + this.state.message + '</li>' +
           '</ul>' +
           '</div>',
       };
@@ -88,7 +88,7 @@ export default class Contact extends Component {
               fName: '',
               lName: '',
               email: '',
-              subject: ''
+              message: ''
           }, () => sgMail.send(MSG))
       }
   };
@@ -110,14 +110,14 @@ export default class Contact extends Component {
   <tbody>
     <tr>
     <td><center>
-    <form action="#">
+    <form onSubmit={this.onSubmit}>
     <div className="firstName">
       {/* <label for="firstname"></label> */}
-      <input type="text" value={this.state.fName} placeholder="My first name is" name="name" id="name_input" onChange={event => this.changeValue(event)}  required/>
+      <input type="text" value={this.state.fName} placeholder="My first name is" name="fName" id="name_input" onChange={event => this.changeValue(event)}  required/>
     </div>
     <div className="lastName">
       {/* <label for="lastName"></label> */}
-      <input type="text" value={this.state.lName} placeholder="My last name is" name="name" id="name_input" onChange={event => this.changeValue(event)} required/>
+      <input type="text" value={this.state.lName} placeholder="My last name is" name="lName" id="name_input" onChange={event => this.changeValue(event)} required/>
     </div>
     <div className="email">
       {/* <label for="email"></label> */}
@@ -127,10 +127,11 @@ export default class Contact extends Component {
       {/* <label for="subject"></label> */}
       {/* <select placeholder="Subject line"  id="subject_input" value={this.state.subject} onChange={event => this.changeValue(event)} required>
       </select>
-    </div> */} */}
+    </div> */} 
     <div className="message">
       {/* <label for="message"></label> */}
-      <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+      <textarea type="text" name="message" placeholder="I'd like to chat about" id="message_input" value={this.state.message} cols="30" rows="5" onChange={event=> this.changeValue(event)} required>
+      </textarea>
     </div>
 
 
@@ -153,3 +154,7 @@ export default class Contact extends Component {
       );
   }
 }
+
+// finish off email tomorrow = table currently doesn't recognise first or second name (and won't show). 
+// Might be to do with the onSubmit style of the form = doesn't alter until submit button is pressed. Everything else 
+// should be okay - but cannot test locally - needs deployment for us to be able to tell what is happening. 
