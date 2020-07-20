@@ -81,6 +81,7 @@ export default class Contact extends Component {
               errorType
           })
       } else {
+        
           this.setState({
               formValidity,
               errorType: "Success, we'll get back to you shortly!",
