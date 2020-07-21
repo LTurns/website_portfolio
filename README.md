@@ -2,7 +2,7 @@
 
 #### Intent ####
 
-When creating my portfolio, I had an intention of making an app that was both slick and sophisticated. Most importantly, I wanted it to contain some of my favourite elements of front-end development. For this reason, I decided to create the app with React & Canvas HTML5. 
+When creating my portfolio, I had an intention of making an app that was both slick and sophisticated. Most importantly, I wanted it to contain some of my favourite elements of front-end development. For this reason, I decided to create the app with React & HTML5. 
 
 The home page is constructed of CSS Animation and keyframes, set above some free-moving, pink particles I formulated with 'react-particles-js.'
 
