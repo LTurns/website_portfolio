@@ -67,7 +67,7 @@ function gameLoop(timestamp){
   ctx.fillText('Jest, Jasmine, RSpec, Cypress', 800, 213);
 
   ctx.fillText('Keen to develop and learn new skills', 800, 260);
-  ctx.fillText('Confident writter', 800, 300);
+  ctx.fillText('Confident writer', 800, 300);
   ctx.fillText('Entrepreneurial spirit', 800, 343);
 
 

@@ -1,15 +1,39 @@
-#name_input, #email_input, #telephone_input, #message_input {
+/* #name_input, #email_input, #telephone_input, #message_input {
     color: white;
-}
+} */
 
-#form_button {
+
+
+#email {
     background-color: black;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10%;
+    border: white 2px solid;
     text-decoration: none;
     color: white;
+    opacity: 0.8;
 }
 
-#form_button :hover {
+#email :hover {
     size: 100px;
+}
+
+
+/* tr {
+    opacity: 0.8;
+} */
+
+/* tr {
+    width: 120px;
+    height: 200px;
+    background-color: black;
+} */
+
+img {
+    width: 270px;
+    height: 300px;
+}
+
+.container_email {
+    margin-top: 100px;
 }

@@ -21,14 +21,15 @@ export default class PortfolioParticles extends Component {
         },
       },
       number: {
-        value: 15
+        value: 25
       },
       line_linked: {
         enable: true,
         distance: 200,
-        color: "#808080",
+        // color: "#808080",
         // color: "#fbaed2",
-        opacity: 0.6,
+        color: "#ff007f",
+        opacity: 0.9,
         width: 300
     },
       size: {
