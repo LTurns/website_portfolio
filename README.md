@@ -25,7 +25,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 #### Deployment ###
 
-This site was deployed with the use of netlify. Please visit the live site <a href="https://compassionate-khorana-73d965.netlify.app/">here</a>. 
+This site was deployed with the use of netlify. Please visit the live site <a href="https://lizzieportfolio.netlify.app/">here</a>. 
 Netlify Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/243dbad5-1f7a-4176-a380-fddfdc876d53/deploy-status)](https://app.netlify.com/sites/compassionate-khorana-73d965/deploys)
 
 ## Available Scripts
