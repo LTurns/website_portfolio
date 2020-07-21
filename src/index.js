@@ -38,7 +38,7 @@ function gameLoop(timestamp){
   // ctx.textAlign = "center";
   ctx.font = '15px Arial';
   ctx.textAlign = 'center';
-  ctx. textBaseline = 'middle';
+  ctx.textBaseline = 'middle';
   ctx.fillText('For Fun:', 250, 18);
   ctx.fillText('Forever brunching & pub-lunching with friends', 200, 53);
   ctx.fillText('Listening to vinyl records', 200, 93);
