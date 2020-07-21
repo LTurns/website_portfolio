@@ -8,9 +8,11 @@ The home page is constructed of CSS Animation and keyframes, set above some free
 
 'About Me' was inspired by a Paddle Game I made (refer to Portfolio section). I wanted an interactive game to be used to reveal my tech-stack and employable skills. Therefore, I referenced a canvas element from my React "About' component, and constructed the separate elements and classes with the use of vanilla JavaScript.
 
+The Portfolio section was created with Bootstrap. I separated the sub-sections by a structure of 'Games', 'Database Integration' and 'API Integration' and will continue to add to this page as my tech-stack and project-load increases. 
+
 #### Tech Stack ####
 
-* Bootstrap - Utilised tables and columns to make pages easily responsive 
+* Bootstrap - Utilised tables and columns to make pages easily responsive.
 * CSS - Added keyframes to give animation and a free-flowing feel to home page. CSS was also used for the overall design and colour palette. 
 * HTML - Index.html as root for React. 
 * React - For overall file structure and components (representing the different pages). 
