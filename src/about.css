@@ -1,0 +1,22 @@
+
+
+@media (max-width:768px){
+.table1 {
+  height: 500px;
+  width: 450px;
+  padding: 0%;
+  margin-top: 20%;
+  display: block;
+ }
+
+ canvas {
+  width: 100%;
+ }
+}
+
+.table1 {
+ padding: 2%;
+ width: 100%;
+ 
+}
+

@@ -7,8 +7,7 @@ export default class Navigation extends Component {
   render () {
 
     return (
-<nav className="navbar-expand-sm">
-
+<nav className="navbar-expand">
 
 <ul className="navbar-nav">
   <li className="nav-item">

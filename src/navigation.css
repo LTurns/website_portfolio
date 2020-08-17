@@ -1,4 +1,12 @@
-.navar-nav{
+@media (max-width:768px){
+    .navbar-nav {
+        
+    }
+}
+
+
+
+.navbar-nav{
     background-color: black;
 }
 
