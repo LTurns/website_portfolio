@@ -39,16 +39,16 @@ function gameLoop(timestamp){
   ctx.font = '15px Arial';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText('For Fun:', 250, 18);
-  ctx.fillText('Forever brunching & pub-lunching with friends', 200, 53);
-  ctx.fillText('Listening to vinyl records', 200, 93);
-  ctx.fillText('Tennis or a little jog for fitness', 200, 133);
-  ctx.fillText('Playing keys or composing music', 200, 173);
-  ctx.fillText('Any chance to be creative!', 200, 213);
+  ctx.fillText('For Fun:', 200, 53);
+  ctx.fillText('Forever brunching & pub-lunching with friends', 200, 93);
+  ctx.fillText('Listening to vinyl records', 200, 133);
+  ctx.fillText('Tennis or a little jog for fitness', 200, 173);
+  ctx.fillText('Playing keys or composing music', 200, 213);
+  ctx.fillText('Any chance to be creative!', 200, 260);
 
-  ctx.fillText('Always bubbly and optimistic', 200, 260);
-  ctx.fillText('Strong and professional communicator', 200, 300);
-  ctx.fillText('Agile developer and good team player', 200, 343);
+  ctx.fillText('Always bubbly and optimistic', 200, 300);
+  ctx.fillText('Strong and professional communicator', 200, 343);
+  ctx.fillText('Agile developer and good team player', 200, 383);
 
   
 
@@ -59,16 +59,16 @@ function gameLoop(timestamp){
   ctx.fillText('& tech stack!', 500, 290)
   ctx.fillText('* * * * * * * * * * * * * * *', 500, 320)
 
-  ctx.fillText('Tech Stack:', 800, 18);
-  ctx.fillText('React, Bootstrap, CSS, HTML', 800, 53);
-  ctx.fillText('JQuery, SVG, Canvas HTML5', 800, 93);
-  ctx.fillText('Node JS, Sinatra (Ruby)', 800, 133);
-  ctx.fillText('MongoDB, postgreSQL, mySQL', 800, 173);
-  ctx.fillText('Jest, Jasmine, RSpec, Cypress', 800, 213);
+  ctx.fillText('Tech Stack:', 800, 53);
+  ctx.fillText('React, Bootstrap, CSS, HTML', 800, 93);
+  ctx.fillText('JQuery, SVG, Canvas HTML5', 800, 133);
+  ctx.fillText('Node JS, Sinatra (Ruby)', 800, 173);
+  ctx.fillText('MongoDB, postgreSQL, mySQL', 800, 213);
+  ctx.fillText('Jest, Jasmine, RSpec, Cypress', 800, 260);
 
-  ctx.fillText('Keen to develop and learn new skills', 800, 260);
-  ctx.fillText('Confident writer', 800, 300);
-  ctx.fillText('Entrepreneurial spirit', 800, 343);
+  ctx.fillText('Keen to develop and learn new skills', 800, 300);
+  ctx.fillText('Confident writer', 800, 343);
+  ctx.fillText('Entrepreneurial spirit', 800, 383);
 
 
 
