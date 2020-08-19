@@ -60,7 +60,7 @@ function gameLoop(timestamp){
   ctx.fillText('* * * * * * * * * * * * * * *', 500, 320)
 
   ctx.fillText('Tech Stack:', 800, 53);
-  ctx.fillText('React, Bootstrap, CSS, HTML', 800, 93);
+  ctx.fillText('Vue JS, React JS, Bootstrap, CSS, HTML', 800, 93);
   ctx.fillText('JQuery, SVG, Canvas HTML5', 800, 133);
   ctx.fillText('Node JS, Sinatra (Ruby)', 800, 173);
   ctx.fillText('MongoDB, postgreSQL, mySQL', 800, 213);
